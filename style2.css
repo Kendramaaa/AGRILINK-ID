@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.4) url(Gambar\ 1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: darken;
+}
+
+/* Style untuk navbar */
+.navbar {
+  width: 100%;
+  padding: 10px 40px;
+  background: rgba(0, 0, 0, 0.4); /* Transparan hitam */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  backdrop-filter: blur(6px); /* Efek blur (opsional) */
+  z-index: 1000;
+  left: 0;
+}
+
+/* Wrapper div */
+nav h2 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: greenyellow;
+}
+
+/* Menghapus bullet list */
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+/* Jarak antar item */
+nav ul li {
+  margin-left: 2rem;
+}
+
+/* Link */
+nav ul li a {
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
+  border-radius: 5px;
+  padding: 8px 15px;
+}
+
+.active {
+  font-weight: bold;
+  color: white;
+  background-color: green;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
+  border-radius: 5px;
+  padding: 8px 15px;
+}
+
+/* Hover efek */
+nav ul li a:hover {
+  color: white;
+  background-color: green;
+}
+
+.wrapper {
+  width: 420px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(9px);
+  color: #fff;
+  border-radius: 12px;
+  padding: 30px 40px;
+}
+.wrapper h1 {
+  font-size: 36px;
+  text-align: center;
+  color: greenyellow;
+}
+.wrapper .input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+
+  margin: 30px 0;
+}
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 40px;
+  font-size: 16px;
+  color: #fff;
+  padding: 20px 45px 20px 20px;
+}
+.input-box input::placeholder {
+  color: #fff;
+}
+.input-box i {
+  position: absolute;
+  right: 20px;
+  top: 30%;
+  transform: translate(-50%);
+  font-size: 20px;
+}
+
+.wrapper .remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14.5px;
+  margin: -15px 0 15px;
+}
+
+.remember-forgot label-input {
+  accent-color: #fff;
+  margin-right: 3px;
+}
+
+.remember-forgot a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.remember-forgot a:hover {
+  text-decoration: underline;
+}
+
+.wrapper .btn {
+  width: 100%;
+  height: 45px;
+  background-color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 16px;
+  color: green;
+  font-weight: bold;
+}
+
+.wrapper .btn:hover {
+  color: white;
+  background-color: green;
+  transition: 0.2s;
+}
+
+.wrapper .register-link {
+  font-size: 14.5px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.register-link p a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register-link p a:hover {
+  text-decoration: underline;
+}
