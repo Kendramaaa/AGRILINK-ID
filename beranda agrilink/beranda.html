@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrilink ID - Marketplace</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="beranda.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <i class="fas fa-leaf"></i> Agrilink ID
+        </div>
+        <button class="nav-btn" onclick="openUploadModal()">
+            <i class="fas fa-plus"></i> Jual Panen
+        </button>
+    </nav>
+
+    <div class="container">
+        <div class="controls-section">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Cari beras, jagung, sayuran...">
+            </div>
+            <div class="category-filters" id="categoryFilters">
+                <button class="active" data-cat="all">Semua</button>
+                <button data-cat="grains">Bijian</button>
+                <button data-cat="vegetables">Sayuran</button>
+                <button data-cat="fruits">Buah</button>
+            </div>
+        </div>
+
+        <div class="product-grid" id="productGrid">
+            </div>
+    </div>
+
+    <div class="modal" id="uploadModal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModals()">&times;</span>
+            <h2>Upload Hasil Panen</h2>
+            <form id="uploadForm">
+                <div class="form-group">
+                    <label>Nama Produk</label>
+                    <input type="text" id="pName" required placeholder="Contoh: Beras Merah Organik">
+                </div>
+                <div class="form-group">
+                    <label>Kategori</label>
+                    <select id="pCategory">
+                        <option value="grains">Bijian (Grains)</option>
+                        <option value="vegetables">Sayuran (Vegetables)</option>
+                        <option value="fruits">Buah (Fruits)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Harga (Rp / kg)</label>
+                    <input type="number" id="pPrice" required placeholder="15000">
+                </div>
+                <div class="form-group">
+                    <label>Stok (kg)</label>
+                    <input type="number" id="pStock" required placeholder="100">
+                </div>
+                <div class="form-group">
+                    <label>Deskripsi</label>
+                    <textarea id="pDesc" rows="3" placeholder="Kualitas, lokasi panen, dll..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Foto Produk</label>
+                    <input type="file" id="pPhoto" accept="image/*" required>
+                </div>
+                <button type="submit" class="submit-btn">Posting Produk</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="detailModal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModals()">&times;</span>
+            <img src="" alt="" class="detail-img" id="dImg">
+            <span class="category-tag" id="dCat">KATEGORI</span>
+            <h2 id="dTitle">Judul Produk</h2>
+            <h3 class="card-price" id="dPrice">Rp 0</h3>
+            <p class="card-stock" id="dStock">Stok: 0 kg</p>
+            <hr style="margin: 15px 0; opacity: 0.2;">
+            <p id="dDesc" style="color: #555; line-height: 1.6;">Deskripsi...</p>
+            
+            <a href="#" target="_blank" class="whatsapp-btn" id="dWhatsapp">
+                <i class="fab fa-whatsapp"></i> Hubungi Penjual (WhatsApp)
+            </a>
+        </div>
+    </div>
+
+    <script src="beranda.js"></script>
+</body>
+</html>
